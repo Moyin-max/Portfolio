@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Ezekiel Moyinoluwa</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Ezekiel</div>
-            <ul class="nav-links">
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar container">
+            <div class="logo">Ezekiel<span class="dot">.</span></div>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -22,28 +25,53 @@
         </nav>
     </header>
 
-    <section class="about">
-        <img src="Images/about.jpg" alt="about me" width="300" height="400">
-        <h2>About Me</h2>
-        <p>
-            I am a passionate web developer with experience gained during my SIWES training.
-            I enjoy creating modern, responsive websites with clean code and creative designs.
-            My goal is to keep improving and build impactful projects.
-        </p>
+    <!-- About Section -->
+    <section class="about container">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="Images/about.jpg" alt="Ezekiel Moyinoluwa">
+            </div>
+
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    Hi, I'm <strong>Ezekiel Moyinoluwa</strong> — a passionate web developer dedicated to creating
+                    clean,
+                    responsive, and user-friendly websites. My journey began during my SIWES internship, where I
+                    discovered my love
+                    for web design and development.
+                </p>
+                <p>
+                    I enjoy turning ideas into reality through HTML, CSS, and JavaScript, and I’m currently exploring
+                    modern tools
+                    like React to build dynamic web applications. I believe that great design should combine creativity,
+                    clarity,
+                    and purpose.
+                </p>
+                <p>
+                    Outside of coding, I love learning new technologies, helping others grow, and staying curious about
+                    how the web
+                    shapes the world. My goal is to build solutions that not only work — but inspire.
+                </p>
+                <a href="skills.html" class="btn">See My Skills</a>
+            </div>
+        </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Moyinoluwa. All Rights Reserved.</p>
+        <p>© 2025 Ezekiel Moyinoluwa. All Rights Reserved.</p>
     </footer>
-    <ul>
-        <li>
-            <p><a href="index.html">Back to Homepage</a></p>
-            <p><a href="about.html">About Me</a></p>
-            <p><a href="skills.html">My Skills</a></p>
-            <p><a href="projects.html">My Projects</a></p>
-            <p><a href="contact.html">My Contact</a></p>
-        </li>
-    </ul>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
 </body>
 
 </html>

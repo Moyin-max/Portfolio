@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ezekiel Moyinoluwa | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Ezekiel</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar container">
+            <div class="logo">Ezekiel<span class="dot">.</span></div>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -25,26 +26,46 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <img src="Images/homepage.jpeg" alt="homepage image">
-        <h1>Hi, I'm <span>Ezekiel Moyinoluwa</span></h1>
-        <p>Web Developer & SIWES Intern</p>
-        <a href="Ezekiel Moyinoluwa CV.pdf" class="btn" download>Download CV</a>
+    <section class="hero container">
+        <div class="hero-text">
+            <h1>Hello, I'm <span class="highlight">Ezekiel Moyinoluwa</span></h1>
+            <p>Frontend Web Developer | Passionate about creating modern and responsive user experiences.</p>
+            <br>
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn">View My Projects</a>
+                <a href="Ezekiel Moyinoluwa CV.pdf" class="btn-outline" download>Download CV</a>
+            </div>
+        </div>
+        <br>
+        <div class="hero-image">
+            <img src="Images/homepage.jpeg" alt="Ezekiel Moyinoluwa" width="400" height="200" />
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="preview container">
+        <h2>About Me</h2>
+        <p>I’m a web developer with a passion for crafting clean, efficient, and responsive websites. I enjoy turning
+            ideas
+            into functional and visually appealing digital experiences. Currently, I’m exploring React and modern
+            JavaScript
+            frameworks to enhance my frontend development skills.</p>
+        <a href="about.html" class="btn">Learn More</a>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Moyinoluwa. All Rights Reserved.</p>
+        <p>© 2025 Ezekiel Moyinoluwa. All Rights Reserved.</p>
     </footer>
-    <ul>
-        <li>
-            <p><a href="index.html">Welcome to my Homepage</a></p>
-            <p><a href="about.html">About Me</a></p>
-            <p><a href="skills.html">My Skills</a></p>
-            <p><a href="projects.html">My Projects</a></p>
-            <p><a href="contact.html">My Contact</a></p>
-        </li>
-    </ul>
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
 </body>
 
 </html>
