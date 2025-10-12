@@ -366,3 +366,71 @@ footer {
     width: 100%;
   }
 }
+/* =========================================
+   RESPONSIVE IMAGES
+========================================= */
+
+/* General image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 20px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Add smooth hover effect */
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+}
+
+/* Section-specific images */
+.hero img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+}
+
+.about img,
+.skills img,
+.projects img,
+.contact img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: contain;
+}
+
+/* Make layout responsive */
+@media (max-width: 768px) {
+  img {
+    max-width: 90%;
+  }
+
+  .hero img {
+    width: 150px;
+  }
+
+  .about img,
+  .skills img,
+  .projects img,
+  .contact img {
+    max-width: 250px;
+  }
+}
+
+/* For very large screens */
+@media (min-width: 1200px) {
+  .about img,
+  .skills img,
+  .projects img,
+  .contact img {
+    max-width: 400px;
+  }
+}
