@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Ezekiel Moyinoluwa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar container">
+            <div class="logo">Ezekiel<span class="dot">.</span></div>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about container">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="Images/about.jpg" alt="Ezekiel Moyinoluwa">
+            </div>
+
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    I am a <strong>Computer Science undergraduate at Crawford University,</strong>expected to graduate
+                    in 2027, with a strong interest in frontend development and software engineering.
+                </p>
+                <p>
+                    I have hands-on experience building web applications using HTML, CSS, and JavaScript, and I enjoy
+                    creating clean, responsive, and user-friendly interfaces. In addition to frontend technologies, I
+                    have experience working with Go (Golang) and Shell scripting, which have strengthened my programming
+                    logic, system understanding, and problem-solving skills.
+                </p>
+                <p>
+                    I am also a Women Techsters Fellowship participant, where I gained foundational knowledge in HTML,
+                    CSS, and JavaScript, and I have completed a Machine Learning course on Udemy using Python, RStudio,
+                    and Google Colab. I am continuously learning, improving my technical skills, and striving to
+                    contribute to meaningful and impactful technology solutions.
+                </p>
+                <a href="skills.html" class="btn">See My Skills</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Ezekiel Moyinoluwa. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>
